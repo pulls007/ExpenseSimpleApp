@@ -4,6 +4,7 @@ import com.company.models.Split.Split;
 import com.company.models.User;
 
 import java.util.List;
+import java.util.UUID;
 
 public  abstract class Expense {
 
@@ -13,8 +14,21 @@ public  abstract class Expense {
     private List<Split> splits;
     private ExpenseMetaData metadata;
 
+    @Override
+    public String toString() {
+        return "Expense{" +
+                "id='" + id + '\'' +
+                ", amount=" + amount +
+                ", paidBy=" + paidBy +
+                ", splits=" + splits +
+                ", metadata=" + metadata +
+                '}';
+    }
+
     public Expense(double amount, User paidBy, List<Split> splits, ExpenseMetaData metadata) {
 //        this.id = id;
+        UUID uuid = UUID.randomUUID();
+        this.id=    uuid.toString();
         this.amount = amount;
         this.paidBy = paidBy;
         this.splits = splits;

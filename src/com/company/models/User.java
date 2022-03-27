@@ -6,6 +6,16 @@ package com.company.models;
         private String email;
         private String phone;
 
+        @Override
+        public String toString() {
+            return "User{" +
+                    "id='" + id + '\'' +
+                    ", name='" + name + '\'' +
+                    ", email='" + email + '\'' +
+                    ", phone='" + phone + '\'' +
+                    '}';
+        }
+
         public User(String id, String name, String email, String phone) {
             this.id = id;
             this.name = name;
