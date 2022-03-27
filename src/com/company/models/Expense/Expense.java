@@ -60,4 +60,5 @@ public  abstract class Expense {
     public ExpenseMetaData getMetadata() {
         return metadata;
     }
+    public  abstract boolean validate();
 }
