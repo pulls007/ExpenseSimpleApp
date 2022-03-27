@@ -18,7 +18,7 @@ public class ExpenseService {
                 for(Split split:splits){
                     split.setAmount(splitAmount);
                 }
-                System.out.println(splits.get(0)+"pulkit");
+//                System.out.println(splits.get(0).getUser().getId()+" pulkit ");
                 splits.get(0).setAmount(splitAmount + (amount - splitAmount*totalSplits));
                 return new EqualExpense(amount, paidBy, splits, expenseMetaData);
             case EXACT:
